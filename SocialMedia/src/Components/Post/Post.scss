@@ -1,0 +1,69 @@
+@import "../../style.scss";
+.container { @include themify($themes){ 
+  background-color: themed('bg');
+  border-radius: 12px;
+  box-shadow: -1px 2px 18px -9px themed('bg');
+  -webkit-box-shadow: -1px 2px 18px -9px themed('bg');
+  -moz-box-shadow: -1px 2px 18px -9px themed('bg');
+  .post {
+    color: themed('textColor');
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    .user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .left {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .name {
+          color: themed('textColor');
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          h3{
+            color:themed('textColor');
+          }
+          span{
+            color: themed('textColorSoft');
+            font-size: small;
+          }
+        }
+      }
+      MoreHorizIcon {
+      }
+    }
+    .postContent{
+      p{
+
+      }
+      img{
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        margin-top: 20px;
+      }
+    }
+    .LCS{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          font-size: 14px;
+    }
+  }
+  }}}

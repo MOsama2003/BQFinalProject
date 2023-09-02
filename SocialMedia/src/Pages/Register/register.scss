@@ -1,0 +1,79 @@
+.loginPage{
+    height: 100vh;
+    background-color: #ADD8E6;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+    .card{
+        display: flex;
+        width: 45%;
+        min-height: 65%;
+        background-color: white;
+        border-radius: 4px;
+        .Left{
+            color: white;
+            padding: 40px;
+            flex: 1;
+            background: linear-gradient(rgba(101, 87, 101, 0.8),rgba(0,0,0,0.5)),url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL2GaPLrXUa5fzKaAZw_ms4Ch_NxLjpUk8HQ&usqp=CAU'), center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            overflow: hidden;
+            .h1{
+                font-size: 70px;
+                line-height: 80px;
+            }
+            p{
+
+            }
+            span{
+
+            }
+            button{
+                cursor: pointer;
+                padding: 8px;
+                color: black;
+                font-weight: bold;
+                width: 60%;
+                border-radius: 3px;
+            }
+        }
+        .right{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            padding: 50px;
+            justify-content: center;
+            h1{
+                font-size: 50px;
+                font-weight: bold;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                input{
+                    padding: 15px;
+                    border-color: rgb(187, 176, 176);
+                    border-left: none;
+                    border-right: none;
+                    border-top: none;
+                }
+                button{
+                    cursor: pointer;
+                    padding: 8px;
+                    color: rgb(255, 255, 255);
+                    font-weight: bold;
+                    width: 60%;
+                    border-radius: 3px;
+                    border: none;
+                    background-color: lightskyblue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import "../../style.scss";
+.leftbar{
+  @include themify($themes) {
+    position: sticky;
+    flex: 2;
+    background-color: themed('bg');
+    top: 68px;
+    color: themed('textColor');
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    height: calc(100vh - 68px);
+    @include mobile{
+      display: none;
+    }
+
+    .container {
+      background-color: themed('bg');  
+      padding: 20px;
+        .menu {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+          hr {
+            background-color:themed('bgSoft');
+            height: 0.5px;
+            border: none;
+            margin: 10px 10px;
+          }
+          .user {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .img {
+              height: 30px;
+              border-radius: 150%;
+              object-fit: cover;
+            }
+            span {
+              font-weight: 700;
+            }
+          }
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+              height: 30px;
+              width: 30px;
+              object-fit: cover;
+            }
+            span {
+            }
+          }
+        }
+      }  }
+      
+}

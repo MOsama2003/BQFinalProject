@@ -1,0 +1,68 @@
+@import "../../style.scss";
+.navbar { @include themify($themes) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  border-bottom: 2px solid themed('border');
+  background-color: themed("bg");
+  position: sticky;
+  color: themed("textColor");
+  top: 0px;
+  z-index: 999;
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    span {
+      color: themed('logo');
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      border: 1px solid themed('border');
+      border-radius: 5px;
+      padding: 5px;
+      width: 500px;
+      gap: 10px;
+      input {
+        width: 100%;
+        border: none;
+        color: themed('textColor');
+        background: transparent;
+        @include mobile{
+          display: none;
+        }
+
+        @include tablet{
+          width: 200px;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @include mobile{
+      display: none;
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      img {
+        height: 30px;
+        border-radius: 150%;
+        object-fit: cover;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+}
